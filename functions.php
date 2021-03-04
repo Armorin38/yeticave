@@ -72,15 +72,30 @@ function compile_template($template, $template_data)
 function Sum_Price($sum, $withRubleElem)
 {
     ceil($sum);
-    if($sum<=1000)
+    if($sum<1000)
     {
-        return $sum;
+        if ($withRubleElem == true) {
+
+            return $sum . '<b class="rub">₽</b>';
+        }
+        else
+        {
+            return $sum;
+        }
     }
     else
     {
-        $sum = number_format ($sum, 0, '.', ' ');
-        return $sum;
+        if ($withRubleElem == true) {
+            $sum = number_format($sum, 0, '.', ' ');
+            return $sum . '<b class="rub">₽</b>';
+        }
+        else{
+            $sum = number_format($sum, 0, '.', ' ');
+            return $sum;
+        }
     }
+
+
 }
 
 function My_Timer()
