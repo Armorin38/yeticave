@@ -4,9 +4,9 @@ require ('conBD.php');
 
 
 
-$is_auth = rand(0, 1);
+// $is_auth = rand(0, 1);
 
-$user_name = 'Armorin38'; // укажите здесь ваше имя
+//$user_name = 'Armorin38'; // укажите здесь ваше имя
 
 //$categories_list = [
    // 'boards' => 'Доски и лыжи',
